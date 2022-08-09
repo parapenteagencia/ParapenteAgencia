@@ -1,0 +1,35 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Options All -Indexes
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+
+<IfModule mod_expires.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+#RewriteRule ^([a-z]+)/?$ $1.php [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+#RewriteRule ^([a-z]+)/?$ $1.html [NC]
+
+ExpiresActive On
+ExpiresByType image/gif A604800
+ExpiresByType image/jpg A604800
+ExpiresByType image/jpeg A604800
+ExpiresByType image/png A604800
+ExpiresByType image/ico A604800
+ExpiresByType image/bmp A604800
+ExpiresByType text/css A604800
+ExpiresByType text/javascript A604800
+ExpiresByType application/javascript A604800
+ExpiresByType application/x-javascript A604800
+</ifmodule>
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>

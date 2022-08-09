@@ -1,0 +1,61 @@
+*::-moz-selection {
+    background-color: #0095D2;
+    color: #000
+}
+
+*::selection {
+    background-color: #0095D2;
+    color: #000
+}
+
+.logo-parapente {
+    width: 25px;
+}
+
+.text-parapente {
+    color: #0095D2 !important;
+}
+
+.img-servicios {
+    width: -webkit-fill-available;
+}
+
+.custom .tp-bullet:hover, .custom .tp-bullet.selected{
+    background: #0095D2;
+}
+
+.custom .tp-bullet, .custom2 .tp-bullet{
+    border: 2px solid #0095D2;
+}
+
+.mayus{
+    text-transform: uppercase;
+}
+
+.br-7{
+    border-radius: 7px;
+}
+
+.btn-parapente{
+    border: 2px solid #0095D2;
+    background-color: #0095D2;
+}
+
+.btn-parapente:hover,active,focus{
+    color: #fff;
+}
+
+
+@media (min-width: 768px) {
+
+    .menu-parapente {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .w-100{
+        width: 100%;
+    }
+
+}
